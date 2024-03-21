@@ -41,17 +41,17 @@ class SmokersProblem:
       self.table.acquire()
       # print(f'Smoker with {ingredient} is checking...')
       if ingredient == 'tobacco' and self.matches and self.paper:
-        print(f'Smoker with { ingredient }: Rollin my blunt...')
+        print(f'Smoker with { ingredient }: Rollin my joint...')
         self.matches = False
         self.paper = False
         self.agent.release()
       elif ingredient == 'matches' and self.tobacco and self.paper:
-        print(f'Smoker with { ingredient }: Rollin my blunt...')
+        print(f'Smoker with { ingredient }: Rollin my joint...')
         self.tobacco = False
         self.paper = False
         self.agent.release()
       elif ingredient == 'paper' and self.tobacco and self.matches:
-        print(f'Smoker with {ingredient}: Rollin my blunt...')
+        print(f'Smoker with {ingredient}: Rollin my joint...')
         self.tobacco = False
         self.matches = False
         self.agent.release()
